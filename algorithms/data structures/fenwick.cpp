@@ -10,7 +10,7 @@ struct Fenwick {
     }   
     
     void add(int idx, ll val) { // does a[i] += x
-        for (int i=idx+1; i<=n; i+=i&-i) {
+        for (int i=idx; i<=n; i+=i&-i) {
             bit[i] += val;
         }   
     }      
@@ -20,7 +20,7 @@ struct Fenwick {
     }   
     ll get(int idx) { // returns value of a[i]
         ll res = 0;
-        for (int i=idx+1; i>0; i-=i&-i) { 
+        for (int i=idx; i>0; i-=i&-i) { 
             res += bit[i];
         }   
         return res;
