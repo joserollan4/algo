@@ -16,7 +16,7 @@ void dijkstra(int source) {
         if (vis[a]) {
             continue;
         }
-        used[a] = true;
+        vis[a] = true;
         
         for (auto &u:adj[a]) {
             ll b = u.first, w = u.second;
