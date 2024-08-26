@@ -1,4 +1,4 @@
-const int N = 3e7;
+const int N = 3e5;
 const ll inf = 9e18;
 
 vector<vector<pair<ll,ll>>> adj(N);
