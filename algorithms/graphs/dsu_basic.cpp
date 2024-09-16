@@ -1,4 +1,4 @@
-// basic union find
+// basic disjoint sets union a.k.a. union find
 // find_set returns parent node of node v in O(lg n)
 // unite "unites" (adds an edge from) a to b in O(lg n)
 vector<int> parent;
