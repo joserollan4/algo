@@ -1,3 +1,4 @@
+#pragma GCC optimize("O1,O2,O3,Ofast,unroll-loops")
 #include "bits/stdc++.h"
 using namespace std;
 using ll = long long;
