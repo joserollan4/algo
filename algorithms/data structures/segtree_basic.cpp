@@ -25,7 +25,7 @@ struct Segtree {
         else {
             update(idx, val, 2*tx + 2, mid, tr);
         }
-        ar[tx] = min(ar[tx],min(ar[2*tx + 1],ar[2*tx + 2]));
+        ar[tx] = min(ar[2*tx + 1],ar[2*tx + 2]);
     }
 
     void update(int idx, int val) { // update v[idx] = val
