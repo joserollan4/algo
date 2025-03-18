@@ -35,7 +35,7 @@ void dijkstra(int source) {
 /*
 vector<int> restore(int source, int end) {
     vector<int> ans;
-    for (int node=end; node!=s; node=path[node]) {
+    for (int node=end; node!=source; node=path[node]) {
         ans.push_back(node);
     }
     ans.push_back(source);
