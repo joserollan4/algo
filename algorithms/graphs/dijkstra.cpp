@@ -3,6 +3,7 @@ const ll inf = 9e18;
 
 vector<vector<pair<ll,ll>>> adj(N);
 vector<ll> dis(N,inf);
+vector<int> path(N,-1);
 vector<bool> vis(N,false);
 
 void dijkstra(int source) {
@@ -23,9 +24,22 @@ void dijkstra(int source) {
             ll d = dis[a] + w;
             if (d < dis[b]) {
                 dis[b] = d;
+                path[b] = a;
                 ll nd = -dis[b];
                 p.push({nd,b});
             }   
         }   
     }   
 }   
+
+/*
+vector<int> restore(int source, int end) {
+    vector<int> ans;
+    for (int node=end; node!=s; node=path[node]) {
+        ans.push_back(node);
+    }
+    ans.push_back(source);
+    reverse(ans.begin(),ans.end());
+    return ans;
+}
+*/
